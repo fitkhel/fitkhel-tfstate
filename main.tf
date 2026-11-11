@@ -9,7 +9,8 @@ terraform {
 }
 
 provider "aws" {
-  region = "ap-south-1"
+  region              = "ap-south-1"
+  allowed_account_ids = ["926614722408"] # the state bucket lives in the prod account
 }
 
 data "aws_caller_identity" "current" {}
